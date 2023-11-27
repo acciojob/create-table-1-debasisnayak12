@@ -1,12 +1,9 @@
 function insert_Row() {
     //Write your code here
   const table = document.getElementById("sampleTable");
-	const newRow = document.createElement('tr');
-	const firstCell = document.createElement('td');
-	firstCell.textContent = 'New Cell1Row1 cell1';
-	const secondCell = document.createElement('td');
-	secondCell.textContent = 'New Cell2Row1 cell2';
-
-	newRow.append(firstCell,secondCell);
-	table.insertBefore(newRow, table.firstChild);
+	const newRow = table.insertRow(0);
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    cell1.innerHTML = "New Cell1";
+    cell2.innerHTML = "New Cell2";
 }
